@@ -6,9 +6,16 @@
 </head>
 <body>
 <?php
+
+$mysqlpass = getenv('MYSQL_PASSWORD');
+$mysql_user = getenv('MYSQL_USER');
+
+echo "mysql user = " . $mysql_user;
+echo "mysql_pass = " . $mysqlpass;
+
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
-$link = mysqli_connect("mysql", getenv('MYSQL_USER'), getenv('MYSQL_PASSWORD'));
+$link = mysqli_connect("mysql", $mysql_user, $mysqlpass);
  
 // Check connection
 if($link === false){
