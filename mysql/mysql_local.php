@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>A Simple PHP File</title>
+    <title>Test MySQL Connection using port forward from localhost</title>
 </head>
 <body>
 <?php
