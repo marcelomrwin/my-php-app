@@ -7,11 +7,11 @@
 <body>
 <?php
 
-$mysqlpass = getenv('MYSQL_PASSWORD');
-$mysql_user = getenv('MYSQL_USER');
+$mysqlpass = file_get_contents('/data/database-password');
+$mysql_user = file_get_contents('/data/database-user');
 
-echo "mysql user = " . $mysql_user;
-echo "mysql_pass = " . $mysqlpass;
+echo "mysql user = " . $mysql_user . "\n";
+echo "mysql_pass = " . $mysqlpass . "\n";
 
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
